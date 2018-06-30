@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour {
 		transform.position = Player.transform.position + offset;
 	}
     private void Update()
-    {
+    {/*
         if (Input.GetKey(KeyCode.Q))
         {
             
@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour {
         if (Input.GetKey(KeyCode.E))
         {
             transform.Rotate(Vector3.up *2 );
-        }
+        }*/
     }
 
 
