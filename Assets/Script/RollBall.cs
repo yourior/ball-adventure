@@ -12,12 +12,14 @@ public class RollBall : MonoBehaviour {
 	public float chargetimer;
     public bool chargeAttack;
     private int distance;
+    public AudioSource audio;
 
-	public Slider ChargeSlider;
+    public Slider ChargeSlider;
 
     // Use this for initialization
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
 		charge = false;
 		chargespeed = 1;
@@ -71,5 +73,15 @@ public class RollBall : MonoBehaviour {
 		//	charge = false;
 
 		//print ("Charge Timer: " + chargetimer);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "tree")
+        {
+            audio.Play();
+            Debug.Log("play");
+        }
+
     }
 }

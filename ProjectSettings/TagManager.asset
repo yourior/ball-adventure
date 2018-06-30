@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ball
   - Trigger
+  - tree
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,7 @@ public class EnemyDead : MonoBehaviour {
     public GameObject[] leaves;
     private int maxleaves;
     
+    
         
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,7 @@ public class EnemyDead : MonoBehaviour {
             FindObjectOfType<MainEngine>().countToBoss++;
             Debug.Log("hit");
             Destroy(gameObject);
-
+            
             for (int i=0;i<maxleaves;i++)
             Destroy(leaves[i]);
         }
