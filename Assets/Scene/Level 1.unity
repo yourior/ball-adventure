@@ -9034,8 +9034,8 @@ Transform:
   m_Father: {fileID: 1777251045}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &651183616
-CapsuleCollider:
+--- !u!64 &651183616
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -9043,10 +9043,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.005
-  m_Height: 0.1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 618d5e5288e27b247a24f0f8271cb143, type: 3}
 --- !u!95 &651183617
 Animator:
   serializedVersion: 3
@@ -10075,8 +10076,8 @@ Transform:
   m_Father: {fileID: 1582856429}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &707943967
-CapsuleCollider:
+--- !u!64 &707943967
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -10084,10 +10085,11 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.005
-  m_Height: 0.1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 618d5e5288e27b247a24f0f8271cb143, type: 3}
 --- !u!95 &707943968
 Animator:
   serializedVersion: 3
@@ -26020,7 +26022,7 @@ GameObject:
   - component: {fileID: 2032072804}
   - component: {fileID: 2032072800}
   - component: {fileID: 2032072799}
-  - component: {fileID: 2032072803}
+  - component: {fileID: 2032072805}
   m_Layer: 0
   m_Name: Enemy_Tree
   m_TagString: tree
@@ -26104,19 +26106,6 @@ Transform:
   m_Father: {fileID: 1870650015}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2032072803
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2032072798}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.005
-  m_Height: 0.1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2032072804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26134,6 +26123,20 @@ MonoBehaviour:
   - {fileID: 14318554}
   - {fileID: 1181257983}
   - {fileID: 682128244}
+--- !u!64 &2032072805
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2032072798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 618d5e5288e27b247a24f0f8271cb143, type: 3}
 --- !u!1 &2038314277
 GameObject:
   m_ObjectHideFlags: 0
