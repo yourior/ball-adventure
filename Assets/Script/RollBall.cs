@@ -11,9 +11,10 @@ public class RollBall : MonoBehaviour {
     public bool charge;
 	public float chargetimer;
     public bool chargeAttack;
-    private int distance;
+    //private int distance;
     public AudioSource audio;
-
+    public float distance;
+    Vector3 Roll;
     public Slider ChargeSlider;
 
     // Use this for initialization
@@ -25,7 +26,7 @@ public class RollBall : MonoBehaviour {
 		chargespeed = 1;
 		chargetimer = 0;
         chargeAttack = false;
-        distance = 5;
+        distance = 5f;
     }
 
     // Update is called once per frame
@@ -40,9 +41,13 @@ public class RollBall : MonoBehaviour {
         {
             chargeAttack = false;
         }
-        float moveHorizontal = Input.GetAxis ("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-		Vector3 Roll = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+        //float moveHorizontal = Input.GetAxis ("Horizontal");
+        //float moveVertical = Input.GetAxis ("Vertical");
+        //Vector3 Roll = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        if (Input.GetKey(KeyCode.W))
+        {
+          Roll = new Vector3(transform.position = transform.position + Camera.main.transform.forward * distance * Time.deltaTime, 0.0f, moveVertical);
+        }
         //Roll = transform.InverseTransformDirection(Roll);
 
         rb.AddForce (Roll * (speed * chargespeed));
